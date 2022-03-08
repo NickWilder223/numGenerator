@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" id="run" value="Get Array">
+    <input type="button" id="repeat" value="Check for Repeats">
+    <div id="confirmation"></div>
+    <br>
+    <br>
+    Please select the number of unique arrays you would like to generate.
+    <br>
+    <select id="num">
+        <option value="" selected>Select a number</option>
+        <option value="10">10</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="1000">1000</option>
+        <option value="10000">10000 (Not a good idea)</option>
+    </select>
+    <input type="button" id="getavg" value="Get Average Time">
+    <div id="time"></div>
+</body>
+<script>
+    var array = [];
+    $('#run').click(function () {
+        array = [];
+
+        var start = new Date().getTime();
+
+        for (let i = 1; i <= 10000; i++) {
+            array.splice(Math.floor(Math.random() * array.length), 0, i);
+        }
+
+        console.log(array);
+
+        var end = new Date().getTime();
+        var time = end - start;
+
+        temp = new Date();
+        curTime = `${temp.getHours()}:${temp.getMinutes()}:${temp.getSeconds()}`;
+
+        $('#confirmation').html(`New array has been created at ${curTime} <br> Time to generate array: ${time}ms</p>`);
+    });
+
+    function checkForRepeats(array) {
+        for (let i = 0; i < array.length; i++) {
+            for (let j = i + 1; j < array.length; j++) {
+                if (array[i] === array[j]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    $('#repeat').click(function () {
+        if (array.length === 0) {
+            alert("Please run the array first");
+        } else {
+            if (checkForRepeats(array)) {
+                alert("There are repeats in the array");
+            } else {
+                alert("There are no repeats in the array");
+            }
+        }
+    });
+
+    $('#getavg').click(function () {
+        tempTimeArr = [];
+
+        var num = $('#num').val();
+
+        if (num == '') {
+            alert('Please select a number from the dropdown list');
+        } else {
+            for (let i = 0; i < num; i++) {
+                array = [];
+                var start = new Date().getTime();
+
+                for (let i = 1; i <= 10000; i++) {
+                    array.splice(Math.floor(Math.random() * array.length), 0, i);
+                }
+
+                console.log(array);
+
+                var end = new Date().getTime();
+                var time = end - start;
+
+                tempTimeArr.push(time);
+            }
+
+            var sum = 0;
+            for (let i = 0; i < tempTimeArr.length; i++) {
+                sum += tempTimeArr[i];
+            }
+
+            var avg = sum / tempTimeArr.length;
+
+            $('#time').html(`Number of arrays generated ${num} <br> Average time to generate array: ${avg}ms <br> Total time to generate: ${sum}ms`);
+        }
+
+    })
+</script>
+
+</html>
