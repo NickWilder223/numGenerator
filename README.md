@@ -13,7 +13,7 @@
 Question:   
 Please write a program that generates a list of 10,000 numbers in random order each time it is run. Each number in the list must be unique and be between 1 and 10,000 (inclusive).
 <br> <br>
-Simply put it, here is the Answer: 
+Simply put it, here is the answer: 
 
 ```javascript
 1   const array = [];
@@ -48,19 +48,19 @@ Let us break this apart even further. <br>
 1    for(let i = 1; i <= 10000; i++) 
 ```
                               
-<p> In order to make sure that we don't have any duplicate arrays we have to randomly choose an index. For this I used Math.random() * the array's length. How ever, this gives me a floating point number, which leads to the line 4. <p>
+<p> In order to make sure that we don't have any duplicate arrays we have to randomly choose an index. For this I used Math.random() * the array's length. However, this gives me a floating point number, which leads to the line 4. <p>
 
 ```javascript
 3   var randomIndex
 ```
 
-<p> To take off the decimals we can uss Math.floor(), this chops off the trailing decimals after each iteration. </p>
+<p> To take off the decimals we can use Math.floor(), this chops off the trailing decimals after each iteration. </p>
   
 ```javascript
 4    var noDecimals
 ```
 
-<p> This next line is the array is created. Utilizing splice() we are able to add and/or remoce any array elements. I used noDecimals to establish a random index. In our case we only want to add, this is why I created the variable numOfItemsRemoved to further illustrate. The index, or i, will be the unique number that we are adding into this array.<p>
+<p> This next line is where the array is created. Utilizing splice() we are able to add and/or remove any array elements. I used noDecimals to establish a random index. In our case we only want to add, this is why I created the variable numOfItemsRemoved to further illustrate. The index, or i, will be the unique number that we are adding into this array.<p>
   
 ```javascript
 7   array.splice(noDecimals), numOfItemsRemoved, i);
