@@ -6,7 +6,7 @@
 [Efficiency & Performance](#analysis)   
 [More About Me](#self-plug)   
 
-<p> Hi, my name is Nick. I'm a recent graduate from TAMUCC with a Bachelors in Computer Science, currently working as a Full Stack Developer. I created a small Node.JS app with my answer and a simple HTML file for testing solve this question Let's jump into the question. <p>
+<p> Hi, my name is Nick. I'm a recent graduate from TAMUCC with a Bachelors in Computer Science, currently working as a Full Stack Developer. I created a small Node.JS app with my answer and a simple HTML file for testing solve this question. Let's jump into the question. <p>
 
 <a name="code"/>
 <h2>Question & Answer</h2>
@@ -121,7 +121,7 @@ Let us break this apart even further. <br>
 2.  https://churchunlimited.com/messagecatalog/
 3.  https://churchunlimited.online/nextsteps (Currently in testing phase as of 3/7)
 
-<p>These are just the front facing products that I've created. Mainly I've been redesigning and creating a lot of employee related products to maximize efficiency of our staff, but unforunately these require some sort of login. Some of the larger "behind-the-scenes projects" are a sub-domain for the production department, a staff website, a ton of work to better assist our volunteers on https://churchunlimited.online, and many many more. I'd love to show you what is all apart of those sites if given the opportunity. </p>
+<p>These are just the front facing products that I've created. Mainly, I've been redesigning and creating a lot of employee related products to maximize efficiency of our staff, but unforunately these require some sort of login. Some of the larger "behind-the-scenes projects" are a sub-domain for the production department, a staff website, a ton of work to better assist our volunteers on https://churchunlimited.online, and many many more. I'd love to show you what is all apart of those sites if given the opportunity. </p>
 
 <p> I hope that this project gave a better understanding for my programming abilities. I'd love to show off more over call/zoom/teams. You can contact me via email at 
 nickwilder208@gmail.com or by phone at (281) 714-9105. 
